@@ -23,7 +23,7 @@ $(function () {
   $("#form_reg").submit(function (e) {
     e.preventDefault(); //阻止默认行为
     $.post(
-      "http://api-breakingnews-web.itheima.net/api/reguser",
+      "/api/reguser",
       {
         username: $("#reg_username").val(),
         password: $("#reg_password").val(),
@@ -42,7 +42,7 @@ $(function () {
     // console.log(1);
     $.ajax({
       method: "POST",
-      url: "http://api-breakingnews-web.itheima.net/api/login",
+      url: "/api/login",
       data: {
         username: $("#login_username").val(),
         password: $("#login_password").val(),
