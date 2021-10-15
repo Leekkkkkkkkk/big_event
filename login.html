@@ -13,14 +13,14 @@
       <div class="formBox">
         <!-- 登录表单 -->
         <div class="login-box">
-          <form class="layui-form">
+          <form class="layui-form" id="reg_login">
             <div class="layui-form-item">
               <i class="layui-icon layui-icon-username"></i>
-              <input type="text" name="title" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input" />
+              <input id="login_username" type="text" name="title" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input" />
             </div>
             <div class="layui-form-item">
               <i class="layui-icon layui-icon-password"></i>
-              <input required lay-verify="required|pwd" type="password" class="layui-input" placeholder="请输入密码" />
+              <input id="login_password" required lay-verify="required|pwd" type="password" class="layui-input" placeholder="请输入密码" />
             </div>
             <div class="layui-form-item">
               <button type="submit" lay-submit class="layui-btn layui-btn-fluid">提交</button>
