@@ -1,9 +1,10 @@
 $.ajaxPrefilter(function (options) {
   options.url = "http://api-breakingnews-web.itheima.net" + options.url;
   if (options.url.includes("/my")) {
-    options.header = {};
-    options.header.Authorization = localStorage.getItem("token");
+    options.headers = {};
+    options.headers.Authorization = localStorage.getItem("token");
     options.complete = function (res) {
+      console.log(res);
       if (res.responseJSON.status === 1 && res.responseJSON.message === "身份认证失败！") {
         // 1. 强制清空 token
         localStorage.removeItem("token");
